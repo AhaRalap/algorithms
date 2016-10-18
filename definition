@@ -1,0 +1,21 @@
+静态表定义：
+#define MaxSize 100
+ElemType Sqlist[MaxSize];
+int len;
+
+
+动态表定义：
+#define MaxSize 100
+typedef struct
+{
+    ElemType *elem;
+    int length;
+    int listsize;
+}Sqlist;
+void initSqlist(Sqlist *L)
+{
+    L->elem = (int *)malloc(MaxSize*sizeof(Elemtype));
+    if(!L->elem) exit(0);
+    L->length = 0;
+    L->listsize = MaxSize;
+}
