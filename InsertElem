@@ -1,0 +1,16 @@
+void InsertElem(Sqlist *L,int i,ElemType item)
+{
+    ElemType *base,*insertptr,*p;
+    if(i<1 || i > L->length+1) exit(0);
+    if(L->length >= l->listsize)
+    {
+	base = (ElemType*)realloc(L->elem,(L->listsize+10)*sizeof(ElemType));
+	L->elem=base;
+	L-listsize = L->listsize+100;
+    }
+    inserPtr = &(L->elem[i-1]);
+    for(p = &(L->elem[L->length-1]);p >= insertPtr;p--)
+	*(p+1) = *p;
+    *insertPtr = item;
+    L->length++;
+}
