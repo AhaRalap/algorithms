@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <cstdio.h>
 #include <algorithm>
 using namespace std;
 
